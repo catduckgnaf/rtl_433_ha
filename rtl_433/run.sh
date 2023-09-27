@@ -34,19 +34,15 @@ fi
 # Create a reasonable default configuration in /config/rtl_433.
 if [ ! "$(ls -A $conf_directory)" ]
 then
-    cat > $conf_directory/rtl_433.conf.template <<EOD
+    cat > $conf_directory/rtl_433.conf <<EOD
 # This is an empty template for configuring rtl_433. mqtt information will be
 # automatically added. Create multiple files ending in '.conf.template' to
 # manage multiple rtl_433 radios, being sure to set the 'device' setting. The
 # device must be set before mqtt output lines.
 # https://github.com/merbanan/rtl_433/blob/master/conf/rtl_433.example.conf
 
-output mqtt://\${host}:\${port},user=\${username},pass=\${password},retain=\${retain}
-report_meta time:iso:usec:tz
-
-# To keep the same topics when switching between the normal and edge versions,
-# use this output line instead.
-# output mqtt://\${host}:\${port},user=\${username},pass=\${password},retain=\${retain},devices=rtl_433/9b13b3f4-rtl433/devices[/type][/model][/subtype][/channel][/id],events=rtl_433/9b13b3f4-rtl433/events,states=rtl_433/9b13b3f4-rtl433/states
+## This output will keep discovery the same among main and next.
+output mqtt://\${host}:\${port},user=\${username},pass=\${password},retain=\${retain},devices=rtl_433/9b13b3f4-rtl433/devices[/type][/model][/subtype][/channel][/id],events=rtl_433/9b13b3f4-rtl433/events,states=rtl_433/9b13b3f4-rtl433/states
 
 # Uncomment the following line to also enable the default "table" output to the
 # addon logs.
