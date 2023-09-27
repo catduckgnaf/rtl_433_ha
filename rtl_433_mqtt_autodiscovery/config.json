@@ -19,7 +19,7 @@
     "discovery_prefix": "homeassistant",
     "discovery_interval": 600,
     "force_update": false,
-    "log_level": "default"
+    "log_level": "debug"
   },
   "schema": {
     "mqtt_host": "str?",
