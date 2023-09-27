@@ -63,7 +63,7 @@ body:
       description: >-
         rtl_433 logs can be found in: [Settings -> Add-ons -> rtl_433](https://my.home-assistant.io/redirect/supervisor_addon/?addon=9b13b3f4_rtl433).
         rtl_433_mqtt_autodiscovery logs can be found in: [Settings -> Add-ons -> rtl_433](https://my.home-assistant.io/redirect/supervisor_addon/?addon=9b13b3f4_rtl433mqttautodiscovery).
-      render: txt
+      render: yml
   - type: textarea
     attributes:
       label: Additional information

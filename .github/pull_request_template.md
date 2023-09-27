@@ -1,7 +1,7 @@
 <!-- Thank you for your contribution to this addon! -->
 
-<!-- rtl_433_mqtt_autodiscovery/rtl_433_mqtt_hass.py is maintained upstream at
-     merbanan/rtl_433. In general, changes to that file should be filed as a
+<!-- rtl_433_mqtt_autodiscovery/rtl_433_mqtt_hass.py is maintained here
+    In general, changes to that file should be filed as a
      pull request there first.
      -->
 

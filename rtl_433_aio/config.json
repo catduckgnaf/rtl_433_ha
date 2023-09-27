@@ -1,9 +1,9 @@
 {
   "name": "rtl_433 MQTT Auto Discovery",
   "image": "ghcr.io/catduckgnaf/rtl_433_ha/rtl_433_mqtt_autodiscovery-{arch}",
-  "version": "main",
-  "slug": "rtl433mqttautodiscovery",
-  "description": "Automatic discovery of rtl_433 device information via MQTT",
+  "version": "0.1.0",
+  "slug": "rtl_433_aio",
+  "description": "AIO RTL 433",
   "url": "https://github.com/catduckgnaf/rtl_433_ha/tree/main/rtl_433_mqtt_autodiscovery",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",

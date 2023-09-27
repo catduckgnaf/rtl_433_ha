@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         arch: [armhf, armv7, aarch64, amd64, i386]
-        addon: [rtl_433]
+        addon: [rtl_433, rtl_433_mqtt_autodiscovery]
 
     steps:
     - name: Inject slug/short variables

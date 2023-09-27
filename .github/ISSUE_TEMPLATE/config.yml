@@ -1,5 +1,30 @@
-blank_issues_enabled: true
-contact_links:
-  - name: Request new device support for Automatic Discovery
-    url: https://github.com/merbanan/rtl_433/issues
-    about: Automatic discovery is part of the rtl_433 project itself. Please request support for new devices there.
+name: Issue Template
+description: Template for creating issues
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Issue Template
+
+        Please fill out the following information when creating a new issue.
+
+        ### Description
+
+        [Description of the issue]
+
+        ### Steps to Reproduce
+
+        [Steps to reproduce the issue]
+
+        ### Expected Behavior
+
+        [What you expected to happen]
+
+        ### Actual Behavior
+
+        [What actually happened]
+
+        ### Additional Information
+
+        [Any additional information that may be helpful]
+
