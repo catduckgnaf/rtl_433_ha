@@ -957,6 +957,6 @@ if __name__ == "__main__":
         ids = ', '.join(str(id) for id in args.ids)
         logging.info("Only discovering devices with ids: [%s]" % ids)
     else:
-        logging.info("Discovering all devices")
+        logging.info("Discovering all selected devices")
 
     run()
