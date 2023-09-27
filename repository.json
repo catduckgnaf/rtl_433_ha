@@ -1,5 +1,5 @@
 {
-  "name": "rtl_433 Home Assistant add-ons",
-  "url": "https://github.com/pbkhrv/rtl_433-hass-addons",
-  "maintainer": "Peter Bakhirev"
+  "name": "rtl_433 HA AIO",
+  "url": "https://github.com/catduckgnaf/rtl_433_ha",
+  "maintainer": "Cat Duck"
 }
