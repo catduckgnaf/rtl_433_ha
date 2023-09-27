@@ -1,4 +1,4 @@
-# RTL
+# RTL_433
 Goal here is to have a single, auto discover script in its open repository. Will make it easier to add new devices.
 
 This uses the master branch, and will continue doing so. 
