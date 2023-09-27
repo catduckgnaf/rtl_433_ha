@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "slug": "rtl433_aio",
   "description": "RTL_433_AIO",
-  "url": "https://github.com/catduckgnaf/rtl_433_ha/tree/main/rtl_433_aio",
+  "url": "https://github.com/pbkhrv/rtl_433-hass-addons/tree/main/rtl_433",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
   "boot": "auto",
