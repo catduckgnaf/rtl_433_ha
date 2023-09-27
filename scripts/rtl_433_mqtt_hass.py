@@ -18,27 +18,13 @@ as device topics by MQTT.
 """
 
 AP_EPILOG="""
-It is strongly recommended to run rtl_433 with "-C si" and "-M newmodel".
-This script requires rtl_433 to publish both event messages and device
-messages. If you've changed the device topic in rtl_433, use the same device
-topic with the "-T" parameter.
-
-MQTT Username and Password can be set via the cmdline or passed in the
-environment: MQTT_USERNAME and MQTT_PASSWORD.
+If you install the rtl_433 add-on and this add-on all mqtt configeration will be done for you
 
 Prerequisites:
 
 1. rtl_433 running separately publishing events and devices messages to MQTT.
+2. Home Assistant
 
-2. Python installation
-* Python 3.x preferred.
-* Needs Paho-MQTT https://pypi.python.org/pypi/paho-mqtt
-
-  Debian/raspbian:  apt install python3-paho-mqtt
-  Or
-  pip install paho-mqtt
-* Optional for running as a daemon see PEP 3143 - Standard daemon process library
-  (use Python 3.x or pip install python-daemon)
 
 
 Running:
@@ -47,22 +33,7 @@ This script can run continually as a daemon, where it will publish
 a configuration topic for the device events sent to MQTT by rtl_433
 every 10 minutes.
 
-Alternatively if the rtl_433 devices in your environment change infrequently
-this script can use the MQTT retain flag to make the configuration topics
-persistent. The script will only need to be run when things change or if
-the MQTT server loses its retained messages.
-
-Getting rtl_433 devices back after Home Assistant restarts will happen
-more quickly if MQTT retain is enabled. Note however that definitions
-for any transitient devices/false positives will retained indefinitely.
-
-If your sensor values change infrequently and you prefer to write the most
-recent value even if not changed set -f to append "force_update = true" to
-all configs. This is useful if you're graphing the sensor data or want to
-alert on missing data.
-
-If you have changed the topic structure from the default topics in the rtl433
-configuration use the -T parameter to set the same topic structure here.
+By Default retain is on, as it should be.
 
 Suggestions:
 
@@ -80,10 +51,6 @@ and how this script works with Home Assistant.
 MQTT Explorer also makes it easy to publish an empty config topic to delete an
 entity from Home Assistant.
 
-
-As of 2020-10, Home Assistant MQTT auto discovery doesn't currently support
-supplying "friendly name", and "area" key, so some configuration must be
-done in Home Assistant.
 
 There is a single global set of field mappings to Home Assistant meta data.
 
