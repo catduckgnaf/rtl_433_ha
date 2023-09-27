@@ -18,7 +18,7 @@ as device topics by MQTT.
 """
 
 AP_EPILOG="""
-It is strongly recommended to run rtl_433 with "-C si".
+It is strongly recommended to run rtl_433 with "-C si" and "-M newmodel".
 This script requires rtl_433 to publish both event messages and device
 messages. If you've changed the device topic in rtl_433, use the same device
 topic with the "-T" parameter.
@@ -69,7 +69,7 @@ Suggestions:
 Running this script will cause a number of Home Assistant entities (sensors
 and binary sensors) to be created. These entities can linger for a while unless
 the topic is republished with an empty config string.  To avoid having to
-do a lot of clean up When running this initially or debugging, set this
+do a lot of clean up when running this initially or debugging, set this
 script to publish to a topic other than the one Home Assistant users (homeassistant).
 
 MQTT Explorer (http://mqtt-explorer.com/) is a very nice GUI for
@@ -114,6 +114,25 @@ SKIP_KEYS = [ "type", "model", "subtype", "channel", "id", "mic", "mod",
 # Global mapping of rtl_433 field names to Home Assistant metadata.
 # @todo - should probably externalize to a config file
 # @todo - Model specific definitions might be needed
+#
+# The "mappings" dictionary maps fields from MQTT messages published on the rtl
+# topic to MQTT devices in Home Assistant. This script compares the keys in the
+# JSON payload of each MQTT message published to the rtl topic to the top-level
+# keys in the "mappings" dictionary below. If a matching key is found then a new
+# MQTT device is added to Home Assistant. The properties of the new device are
+# defined by the second-level "config" object within the matching mapping which
+# is passed directly to MQTT discovery as the payload of a device "config" topic.
+# Other second-level keys within the mapping control the behavior of this script.
+#
+#   - device_type: The MQTT entity type. Must be one of the entity integrations
+#    supported by MQTT discovery (see the MQTT docs for more information)
+#   - object_suffix: A suffix appended to the newly created entity's object_id
+#   - value: If specified, a key in an MQTT message is only considered a match if
+#    the value associated with the key in the MQTT payload is equal to this string.
+#    Useful if a device or sensor publishes its state within commonly used keys.
+#   - config: The config object defines the properties of the device added to
+#    Home Assistant when a match is found. More detailed information describing
+#    the valid fields of config objects can be found in the MQTT docs.
 
 mappings = {
     "temperature_C": {
@@ -526,7 +545,7 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "A",
         "config": {
-            "device_class": "current",
+            "device_class": "power",
             "name": "Current",
             "unit_of_measurement": "A",
             "value_template": "{{ value|float }}",
@@ -550,9 +569,8 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "lux",
         "config": {
-            "device_class": "illuminance",
             "name": "Outside Luminance",
-            "unit_of_measurement": "lx",
+            "unit_of_measurement": "lux",
             "value_template": "{{ value|int }}",
             "state_class": "measurement"
         }
@@ -561,9 +579,8 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "lux",
         "config": {
-            "device_class": "illuminance",
             "name": "Outside Luminance",
-            "unit_of_measurement": "lx",
+            "unit_of_measurement": "lux",
             "value_template": "{{ value|int }}",
             "state_class": "measurement"
         }
@@ -659,6 +676,19 @@ mappings = {
            "automation_type": "trigger",
            "type": "button_short_release",
            "subtype": "button_1",
+        }
+    },
+
+    "event": {
+        "value": "Water Leak",
+        "device_type": "binary_sensor",
+        "object_suffix": "leak",
+        "config": {
+            "name": "Water Sensor",
+            "device_class": "moisture",
+            "force_update": "true",
+            "payload_on": "Water Leak",
+            "payload_off": "Button Press"
         }
     },
 
@@ -835,14 +865,14 @@ def bridge_event_to_hass(mqttc, topic_prefix, data):
 
     # detect known attributes
     for key in data.keys():
-        if key in mappings:
+        if key not in mappings or "value" in mappings[key] and mappings[key]["value"] != data[key]:
+            if key not in SKIP_KEYS:
+                skipped_keys.append(key)
+        else:
             # topic = "/".join([topicprefix,"devices",model,instance,key])
             topic = "/".join([base_topic, key])
             if publish_config(mqttc, topic, model, device_id, mappings[key], key):
                 published_keys.append(key)
-        else:
-            if key not in SKIP_KEYS:
-                skipped_keys.append(key)
 
     if "secret_knock" in data.keys():
         for m in secret_knock_mappings:
