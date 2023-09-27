@@ -3,7 +3,7 @@
   "image": "ghcr.io/pbkhrv/rtl_433-hass-addons-rtl_433-{arch}",
   "version": "0.4.0",
   "slug": "rtl433",
-  "description": "Receive wireless sensor data via an SDR dongle and rtl_433",
+  "description": "RTL_433_AIO",
   "url": "https://github.com/pbkhrv/rtl_433-hass-addons/tree/main/rtl_433",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
@@ -16,9 +16,11 @@
   "options": {
     "rtl_433_conf_file": "",
     "retain": true
+    "enable_auto_discovery": true
   },
   "schema": {
     "rtl_433_conf_file": "str?",
     "retain": "bool"
+    "enable_auto_discovery": "bool"
   }
 }
