@@ -1,7 +1,6 @@
 #!/usr/bin/with-contenv bashio
 
 conf_directory="/config/rtl_433"
-autodiscover_directory="/config/rtl_433/scripts"
 
 if bashio::services.available "mqtt"; then
     host=$(bashio::services "mqtt" "host")
@@ -18,12 +17,6 @@ if [ ! -d $conf_directory ]
 then
     mkdir -p $conf_directory
 fi
-
-if [ ! -d $autodiscover_directory ]
-then
-    mkdir -p $autodiscover_directory
-fi
-
 
 # Check if the legacy configuration file is set and alert that it's deprecated.
 conf_file=$(bashio::config "rtl_433_conf_file")
@@ -48,8 +41,12 @@ then
 # device must be set before mqtt output lines.
 # https://github.com/merbanan/rtl_433/blob/master/conf/rtl_433.example.conf
 
-## Default will work for next and non next.
-output mqtt://\${host}:\${port},user=\${username},pass=\${password},retain=\${retain},devices=rtl_433/9b13b3f4-rtl433/devices[/type][/model][/subtype][/channel][/id],events=rtl_433/9b13b3f4-rtl433/events,states=rtl_433/9b13b3f4-rtl433/states
+output mqtt://\${host}:\${port},user=\${username},pass=\${password},retain=\${retain}
+report_meta time:iso:usec:tz
+
+# To keep the same topics when switching between the normal and edge versions,
+# use this output line instead.
+# output mqtt://\${host}:\${port},user=\${username},pass=\${password},retain=\${retain},devices=rtl_433/9b13b3f4-rtl433/devices[/type][/model][/subtype][/channel][/id],events=rtl_433/9b13b3f4-rtl433/events,states=rtl_433/9b13b3f4-rtl433/states
 
 # Uncomment the following line to also enable the default "table" output to the
 # addon logs.
