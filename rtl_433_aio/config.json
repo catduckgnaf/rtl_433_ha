@@ -1,8 +1,8 @@
 {
-  "name": "rtl_433_aio",
+  "name": "rtl_433",
   "image": "ghcr.io/pbkhrv/rtl_433-hass-addons-rtl_433-{arch}",
-  "version": "0.1.0",
-  "slug": "rtl433_aio",
+  "version": "0.4.0",
+  "slug": "rtl433",
   "description": "RTL_433_AIO",
   "url": "https://github.com/pbkhrv/rtl_433-hass-addons/tree/main/rtl_433",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
