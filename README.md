@@ -1,19 +1,34 @@
-# RTL_433
+# RTL_433 HA Community Edition
 
-This uses the master branch, and will continue doing so. 
+## Rtl_433 HA Discovery
+This will be the main place that rtl_433 discovery script will be hosted from now on. I firmly believe that the script should be owned and used by the HA community, without all the large changes that come with a massive (and amazing) project such as RTL_433.
 
-The autodiscover script is forked and will be maintained here instead of the rtl_433. This will enable us to quickly get easily add to the autodiscover with more control over the process.
+For example, most don't use the autodiscover because it finds all the entities you don't want, and doesn't have the ones we as a community do, such as contact sensors. 
 
-Goal here is to have a single, auto discover script in its open repository. Will make it easier to add new devices.
+I could have simply added everything to MQTT manually, but I wanted to help the community, and especially seeing the current rtl_433 project is looking for a new maintainer.
 
 
-The conf template supplied has not only the protocols and descriptions, but they are all currently disabled.
-This way you can go and only select the ones you want, but still use the autodiscover script.
 
-## todo
 
-Put autodiscover script in /config/rtl_433/scripts (More tranperency and edits are important)
+## rtl_433 HA 
 
-Make one add on, with maybe even a gui and ability to run the script when needed
 
-Add more to the auto discover script. We know the community done more. PIRs and Contact sensors are what we want, and they were not in the previous script
+I have updated a config template, to work with the existing "next" and standard branches. I have listed all available options with descriptions. Simply copy and paste what I have in your config template, then remove the "-" from what you don't want.
+
+Yes I plan to make an add on, but the nice thing about this, if using another machine for RTL, having this template transperent and configured to not find a million devices by default is better.
+
+In combination, this updated script and config will mean you simply need to delete "-" and then autodsicover will work for that protocol only!
+
+
+## add-ons and Intergrations
+
+
+1. Make a new add-on repository, or take over current projects with edits. Seperate for discovery and rtl_433.
+
+2. Make an intergration (not an add-on ) for the discovery script, or maybe even simply instructions on how to use it with HACS and Python scripts to start.
+
+3. Documentation, and getting started improvements
+
+4. Add more to the auto discover script. We know the community done more. PIRs and Contact sensors are what we want, and they were not in the previous script I have started, but help is welcome
+
+5. A gui would be cool, right?
