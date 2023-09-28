@@ -16,9 +16,8 @@ WORKDIR /build
 RUN git clone https://github.com/catduckgnaf/rtl_433_ha
 WORKDIR ./rtl_433
 
-# Build a specific commit or tag.
-# ARG rtl433GitRevision=master
-# RUN git checkout ${rtl433GitRevision}
+ARG rtl433GitRevision=master
+RUN git checkout ${rtl433GitRevision}
 WORKDIR ./build
 RUN cmake ..
 RUN make -j 4
