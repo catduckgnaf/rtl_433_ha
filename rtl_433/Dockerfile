@@ -13,10 +13,10 @@ RUN apk add --no-cache --virtual .buildDeps \
 
 WORKDIR /build
 
-RUN git clone https://github.com/catduckgnaf/rtl_433_ha
+RUN git clone https://github.com/merbanan/rtl_433
 WORKDIR ./rtl_433
 
-ARG rtl433GitRevision=master
+ARG rtl433GitRevision=22.11
 RUN git checkout ${rtl433GitRevision}
 WORKDIR ./build
 RUN cmake ..
