@@ -966,7 +966,7 @@ if __name__ == "__main__":
                         default="null",
                         dest="discover_ids",
                         help="ID's of devices that will be discovered (omit for all)")
-    args = parser.parse_args()
+    args = parser.parse_args(32)
 
     if args.debug and args.quiet:
         logging.critical("Debug and quiet can not be specified at the same time")
