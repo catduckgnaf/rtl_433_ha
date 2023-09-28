@@ -8,10 +8,17 @@ For example, most don't use the autodiscover because it finds all the entities y
 I could have simply added everything to MQTT manually, but I wanted to help the community, and especially seeing the current rtl_433 project is looking for a new maintainer.
 
 
+## RTL_433 Discovery Script Add on
 
+https://github.com/catduckgnaf/rtl_433_haos_autodiscovery_addon
+
+The add on fixes many of the existing problems with the autodiscovery script. You are currently able to specify one device code to add at a time, it works with all versions and supports more devices, with plans to add more.
+
+## RTL_433 Discovery Script Intergration:
+
+Doesn't exist yet, but its on my list. Currently working on improving the existing script more. If you are not on HAOS you can use it with HACS Python Scripts for the time being.
 
 ## rtl_433 HA 
-
 
 I have updated a config template, to work with the existing "next" and standard branches. I have listed all available options with descriptions. Simply copy and paste what I have in your config template, then remove the "-" from what you don't want.
 
@@ -19,8 +26,10 @@ Yes I plan to make an add on, but the nice thing about this, if using another ma
 
 In combination, this updated script and config will mean you simply need to delete "-" and then autodsicover will work for that protocol only!
 
+Currently it is suggested you use the existing Add-ons "Next" branch, and copy this repos config over after install. I am looking to streamline that as well.
 
-## add-ons and Intergrations
+
+## Future plans
 
 
 1. Make a new add-on repository, or take over current projects with edits. Seperate for discovery and rtl_433.
