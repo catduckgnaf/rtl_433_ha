@@ -24,6 +24,7 @@ Prerequisites:
 
 1. rtl_433 running separately publishing events and devices messages to MQTT.
 2. Home Assistant
+3. enable devices using the rtl config template
 
 
 
