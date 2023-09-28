@@ -1,0 +1,28 @@
+name: rtl_433
+version: "0.0.4"
+slug: rtl433ha
+description: rtl_433 for Home Assistant
+url: "https://github.com/catduckgnaf/rtl_433_ha/tree/main/rtl_433"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+startup: application
+services:
+  - mqtt:want
+usb: true
+udev: true
+map:
+  - share:rw
+  - config:rw
+options:
+  retain: true
+  rtl_433_config: "config/rtl_433.conf"
+schema:
+  retain: bool
+  rtl_433_config: str
+
+
