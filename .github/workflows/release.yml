@@ -47,7 +47,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y jq
         set -x
-        TAG=$(jq '.version' < rtl_433/config.json)
+        TAG=$(jq '.version' < rtl_433/config.yaml)
         ! docker manifest inspect ghcr.io/${{ github.repository}}-${{ matrix.addon }}-{arch}:$TAG > /dev/null
 
     - name: Inject slug/short variables
