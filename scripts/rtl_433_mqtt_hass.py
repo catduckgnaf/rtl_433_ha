@@ -963,10 +963,10 @@ if __name__ == "__main__":
                         dest="expire_after",
                         help="Number of seconds with no updates after which the sensor becomes unavailable")
     parser.add_argument("-I", "--ids", type=int, nargs="+",
-                        default="null",
-                        dest="discover_ids",
+                        default=42,
+                        dest="discovery_ids",
                         help="ID's of devices that will be discovered (omit for all)")
-    args = parser.parse_args(32)
+    args = parser.parse_args()
 
     if args.debug and args.quiet:
         logging.critical("Debug and quiet can not be specified at the same time")
