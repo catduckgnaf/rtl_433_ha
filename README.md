@@ -36,7 +36,7 @@ Currently it is suggested you use the existing Add-ons "Next" branch, and copy t
 
 2. Make an intergration (not an add-on ) for the discovery script, or maybe even simply instructions on how to use it with HACS and Python scripts to start.
 
-3. Documentation, and getting started improvements
+3. Documentation, and getting started improvements. That means good documentation for anyone looking to get into rtl_433 with an easy guide.
 
 4. Add more to the auto discover script. We know the community done more. PIRs and Contact sensors are what we want, and they were not in the previous script I have started, but help is welcome
 
