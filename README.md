@@ -24,7 +24,7 @@ I have updated a config template, to work with the existing "next" and standard 
 
 Yes I plan to make an add on, but the nice thing about this, if using another machine for RTL, having this template transperent and configured to not find a million devices by default is better.
 
-In combination, this updated script and config will mean you simply need to delete "-" and then autodsicover will work for that protocol only!
+In combination, this updated script and config will mean you simply need to delete "-" and then autodsicover will work for that protocol only! (Well that last part is coming soon)
 
 Currently it is suggested you use the existing Add-ons "Next" branch, and copy this repos config over after install. I am looking to streamline that as well.
 
