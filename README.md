@@ -28,6 +28,10 @@ In combination, this updated script and config will mean you simply need to dele
 
 Currently it is suggested you use the existing Add-ons "Next" branch, and copy this repos config over after install. I am looking to streamline that as well.
 
+https://github.com/pbkhrv/rtl_433-hass-addons (Use this repo for the time being, I suggest the next branch)
+
+I will likely make a second repo just for rtl_433 add-on itself shortly.
+
 
 ## Future plans
 
