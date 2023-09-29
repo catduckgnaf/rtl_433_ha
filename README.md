@@ -5,7 +5,7 @@ This will be the main place that rtl_433 discovery script will be hosted from no
 
 For example, most don't use the autodiscover because it finds all the entities you don't want, and doesn't have the ones we as a community do, such as contact sensors. 
 
-I could have simply added everything to MQTT manually, but I wanted to help the community, and especially seeing the current rtl_433 project is looking for a new maintainer.
+I could have simply added everything to MQTT manually, but I wanted to help the community, and especially seeing the current rtl_433 (HA add-on) project is looking for a new maintainer.
 
 
 ## RTL_433 Discovery Script Add on
