@@ -14,13 +14,15 @@ https://github.com/catduckgnaf/rtl_433_haos_autodiscovery_addon
 
 If you are to lazy to click the link and use the readme, you probably shouldn't be using this. But here is an easy way to add the repository regardless 
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)]([https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=[https://github.com/catduckgnaf/rtl_433_haos_autodiscovery_addon/](https://github.com/catduckgnaf/rtl_433_haos_addon](https://github.com/catduckgnaf/rtl_433_haos_autodiscovery_addon)))
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/catduckgnaf/rtl_433_haos_autodiscovery_addon/)
+
 
 The add on fixes many of the existing problems with the autodiscovery script. You are currently able to specify one device code to add at a time, it works with all versions and supports more devices, with plans to add more.
 
 ## rtl_433 HA 
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=[https://github.com/catduckgnaf/rtl_433_haos_autodiscovery_addon/](https://github.com/catduckgnaf/rtl_433_haos_addon))
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/catduckgnaf/rtl_433_haos_addon/)
+
 
 I have updated a config template, to work with the existing "next" and standard branches. I have listed all available options with descriptions. Simply copy and paste what I have in your config template, then remove the "-" from what you don't want.
 
