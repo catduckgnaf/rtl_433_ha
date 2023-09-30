@@ -21,6 +21,10 @@ The add on fixes many of the existing problems with the autodiscovery script. Yo
 
 ## rtl_433 HA 
 
+https://github.com/catduckgnaf/rtl_433_haos_addon
+
+If you are to lazy to click the link and use the readme, you probably shouldn't be using this. But here is an easy way to add the repository regardless.
+
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/catduckgnaf/rtl_433_haos_addon/)
 
 
