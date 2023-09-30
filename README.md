@@ -7,6 +7,8 @@ For example, most don't use the autodiscover because it finds all the entities y
 
 I could have simply added everything to MQTT manually, but I wanted to help the community, and especially seeing the current rtl_433 (HA add-on) project is looking for a new maintainer.
 
+These add-ons/scripts and intergrations will have version numbers. So you will not need to uninstall and reinstall just to update.
+
 
 ## RTL_433 Discovery Script Add on
 
