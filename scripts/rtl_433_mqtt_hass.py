@@ -964,7 +964,6 @@ if __name__ == "__main__":
                         help="Number of seconds with no updates after which the sensor becomes unavailable")
     parser.add_argument("-I", "--ids", type=int, nargs="+",
                         dest="discovery_ids",
-                        default=0,
                         help="ID's of devices that will be discovered (omit for all)")
     args = parser.parse_args()
 
