@@ -953,7 +953,7 @@ if __name__ == "__main__":
     # This defaults to the rtl433 config default, so we assemble the same topic structure
     parser.add_argument("-T", "--device-topic_suffix", type=str,
                         dest="device_topic_suffix",
-                        default="devices[/type][/model][/subtype][/channel][/id]",
+                        default="devices=rtl_433/9b13b3f4-rtl433/devices[/type][/model][/subtype][/channel][/id],events=rtl_433/9b13b3f4-rtl433/events,states=rtl_433/9b13b3f4-rtl433/states",
                         help="rtl_433 device topic suffix (default: %(default)s)")
     parser.add_argument("-i", "--interval", type=int,
                         dest="discovery_interval",
