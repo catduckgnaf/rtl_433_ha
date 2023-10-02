@@ -32,15 +32,7 @@ If you are to lazy to click the link and use the readme, you probably shouldn't 
 
 I have updated a config template, to work with the existing "next" and standard branches. I have listed all available options with descriptions. Simply copy and paste what I have in your config template, then remove the "-" from what you don't want.
 
-Yes I plan to make an add on, but the nice thing about this, if using another machine for RTL, having this template transperent and configured to not find a million devices by default is better.
-
-In combination, this updated script and config will mean you simply need to delete "-" and then autodsicover will work for that protocol only! (Well that last part is coming soon)
-
-Currently it is suggested you use the existing Add-ons "Next" branch, and copy this repos config over after install. I am looking to streamline that as well.
-
-https://github.com/pbkhrv/rtl_433-hass-addons (Use this repo for the time being, I suggest the next branch)
-
-I will likely make a second repo just for rtl_433 add-on itself shortly.
+I plan to maintain rolloing releases to prevent the main project from making breaking changes, additionally for updates you will not need to uninstall and reinstall.
 
 ## RTL_433 Discovery Script Intergration:
 
