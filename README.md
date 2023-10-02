@@ -21,7 +21,7 @@ If you are to lazy to click the link and use the readme, you probably shouldn't 
 
 The add on fixes many of the existing problems with the autodiscovery script. You are currently able to specify one device code to add at a time, it works with all versions and supports more devices, with plans to add more.
 
-## rtl_433 HA 
+## rtl_433 HA Addon
 
 https://github.com/catduckgnaf/rtl_433_haos_addon
 
