@@ -4,7 +4,7 @@
 ## Yes Leave the naming rtl_433.conf.template. Replace the existing one after install. Do not place before install. 
 ## Yes I plan to make this more automated and for this version to be installed automatically.
 ## This will prevent the discovery script for finding all the things we don't want.
-## Please consider contrubiting to the discovery script with other types of sensors that HA users want.
+## Please consider contributing to the discovery script with other types of sensors that HA users want.
 
 # This is an empty template for configuring rtl_433. mqtt information will be
 # automatically added. Create multiple files ending in '.conf.template' to
