@@ -6,7 +6,7 @@ This will be the main place that my rtl_433 work with Home Assistant will take p
 
 ## RTL_433 MQTT Discovery Script
 
-I am just hosting a script, I think regardless it is best if there are improvements to the current discovery script, until such time when an integration can be done correctly. I still firmly believe we should be at the whim of a big project making breaking changes.
+I am just hosting a script, I think regardless it is best if there are improvements to the current discovery script, until such time when an integration can be done correctly. I still firmly believe we should not be at the whim of a big project making breaking changes.
 
 For example, most don't use the autodiscover because it finds all the entities you don't want, and doesn't have the ones we as a community do, such as contact sensors. Work done to improve the discovery script will not be wasted!
 
