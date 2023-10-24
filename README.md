@@ -25,6 +25,10 @@ I am actively looking into the best way to do this, and want to do it right. I a
 
 ## rtl_433 HA Addon
 
+Here is my version of just the rtl_433 Next Add On. I am not actively working on it, because the current version works. I am spending time on my intergration instead, and when thats ready, will see what I neeed to customize.
+
+Basically feel free to use this, or keep using the "old" one.
+
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/catduckgnaf/rtl_433_haos_addon/)
 
 
