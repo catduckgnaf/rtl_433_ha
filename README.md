@@ -25,8 +25,8 @@ I am actively looking into the best way to do this, and want to do it right. I a
 
 ## rtl_433 HA Addon
 
-I would like to take over the current HA addon for RTL_433. Currently waiting to see if the current maintainer would like me to do so, or if a fork is needed.
-Similar to the discovery script, I feel it is worth doing right. Currently the add-on does indeed work. I have ideas on how to help make it better, and more transparent and easier to understand. 
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/catduckgnaf/rtl_433_haos_addon/)
+
 
 ## Todo plans
 
