@@ -12,7 +12,7 @@ from time import sleep
 # You can run rtl_433 and this script on different machines,
 # start rtl_433 with `-F http:0.0.0.0`, and change
 # to e.g. `HTTP_HOST = "192.168.1.100"` (use your server ip) below.
-HTTP_HOST = "127.0.0.1"
+HTTP_HOST = "192.168.0.208"
 HTTP_PORT = 8433
 
 
