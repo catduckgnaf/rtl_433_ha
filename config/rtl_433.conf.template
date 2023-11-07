@@ -1,4 +1,4 @@
-# version 0.0.3  
+# version 0.0.5  
 
 # READ THIS!!!!!!!
 
@@ -19,6 +19,27 @@ report_meta time:iso:usec:tz
 # Uncomment the following line to also enable the default "table" output to the addon logs.
 output kv
 
+# this is suggested
+convert si
+
+## default is "433.92M", other reasonable values are 315M, 345M, 915M and 868M
+frequency     433.92M
+
+# default is "600" seconds, only used when multiple frequencies are given
+hop_interval  600
+
+# default is "250k", other valid settings are 1024k, 2048k, 3200k
+sample_rate   250k
+
+#  Set minlevel automatically based on average estimated noise.
+pulse_detect autolevel
+
+#  Skip frames below estimated noise level to lower cpu load.
+pulse_detect squelch
+
+# Log levels 1=fatal, 2=critical, 3=error, 4=warning (default), 5=notice, 6=info, 7=debug, 8=trace
+# uncomment below line for debug mode.
+verbose 7
 
 # Everything is disabled by default. Simply remove the  "-" before the protocol number to enable.
 
