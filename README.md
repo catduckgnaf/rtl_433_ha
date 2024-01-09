@@ -19,13 +19,6 @@ Served as inspiration for the (future) integration
 Currently it does not get updated with each release. So feel free to check any changes made to the script in the changelog.md
 
 
-# RTL_433 original HA Add On  rtl_433.conf.template 
-https://github.com/pbkhrv/rtl_433-hass-addons
-
-# If you are using the RTL_433 HA Community Edition (By Catduck) This is the script that comes installed.
-Currently it does not get updated with each release. So feel free to check any changes made to the script in the changelog.md
-
-
 ## rtl_433 HA .conf.template for existing Add On
 
 I have updated a config template, to work with the existing "next" and standard branches. I have listed all available options with descriptions. Simply copy and paste what I have in your config template, then remove the "-" from what you don't want.
