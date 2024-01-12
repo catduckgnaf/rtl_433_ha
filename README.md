@@ -10,10 +10,6 @@ I am just hosting a script, I think regardless it is best if there are improveme
 
 For example, most don't use the autodiscover because it finds all the entities you don't want, and doesn't have the ones we as a community do, such as contact sensors. Work done to improve the discovery script will not be wasted!
 
-# RTL_433_http_ws.py is the latest and greatest websocket script
-
-Served as inspiration for the (future) integration
-
 
 # If you are using the RTL_433 HA Community Edition (By Catduck) This is the script that comes installed.
 Currently it does not get updated with each release. So feel free to check any changes made to the script in the changelog.md
