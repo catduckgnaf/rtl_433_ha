@@ -17,77 +17,6 @@ what MQTT topics to subscribe to in order to receive the data published
 as device topics by MQTT.
 """
 
-AP_EPILOG="""
-It is strongly recommended to run rtl_433 with "-C si".
-This script requires rtl_433 to publish both event messages and device
-messages. If you've changed the device topic in rtl_433, use the same device
-topic with the "-T" parameter.
-
-MQTT Username and Password can be set via the cmdline or passed in the
-environment: MQTT_USERNAME and MQTT_PASSWORD.
-
-Prerequisites:
-
-1. rtl_433 running separately publishing events and devices messages to MQTT.
-
-2. Python installation
-* Python 3.x preferred.
-* Needs Paho-MQTT https://pypi.python.org/pypi/paho-mqtt
-
-  Debian/raspbian:  apt install python3-paho-mqtt
-  Or
-  pip install paho-mqtt
-* Optional for running as a daemon see PEP 3143 - Standard daemon process library
-  (use Python 3.x or pip install python-daemon)
-
-
-Running:
-
-This script can run continually as a daemon, where it will publish
-a configuration topic for the device events sent to MQTT by rtl_433
-every 10 minutes.
-
-Alternatively if the rtl_433 devices in your environment change infrequently
-this script can use the MQTT retain flag to make the configuration topics
-persistent. The script will only need to be run when things change or if
-the MQTT server loses its retained messages.
-
-Getting rtl_433 devices back after Home Assistant restarts will happen
-more quickly if MQTT retain is enabled. Note however that definitions
-for any transitient devices/false positives will retained indefinitely.
-
-If your sensor values change infrequently and you prefer to write the most
-recent value even if not changed set -f to append "force_update = true" to
-all configs. This is useful if you're graphing the sensor data or want to
-alert on missing data.
-
-If you have changed the topic structure from the default topics in the rtl433
-configuration use the -T parameter to set the same topic structure here.
-
-Suggestions:
-
-Running this script will cause a number of Home Assistant entities (sensors
-and binary sensors) to be created. These entities can linger for a while unless
-the topic is republished with an empty config string.  To avoid having to
-do a lot of clean up When running this initially or debugging, set this
-script to publish to a topic other than the one Home Assistant users (homeassistant).
-
-MQTT Explorer (http://mqtt-explorer.com/) is a very nice GUI for
-working with MQTT. It is free, cross platform, and OSS. The structured
-hierarchical view makes it easier to understand what rtl_433 is publishing
-and how this script works with Home Assistant.
-
-MQTT Explorer also makes it easy to publish an empty config topic to delete an
-entity from Home Assistant.
-
-
-As of 2020-10, Home Assistant MQTT auto discovery doesn't currently support
-supplying "friendly name", and "area" key, so some configuration must be
-done in Home Assistant.
-
-There is a single global set of field mappings to Home Assistant meta data.
-
-"""
 
 
 
@@ -636,11 +565,21 @@ mappings = {
         }
     },
 
+     "closed": {
+        "device_type": "binary_sensor",
+        "object_suffix": "door",
+        "config": {
+            "device_class": "door",
+            "payload_on": "1",
+            "payload_off": "0",
+        }
+     },
+
     "consumption_data": {
-        "device_type": "sensor",
+        "device_type": "binary_sensor",
         "object_suffix": "consumption",
         "config": {
-            "name": "SCM Consumption Value",
+            "name": "co",
             "value_template": "{{ value|int }}",
             "state_class": "total_increasing",
         }
