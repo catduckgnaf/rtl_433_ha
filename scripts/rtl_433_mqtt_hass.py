@@ -564,9 +564,9 @@ mappings = {
         "object_suffix": "door",
         "config": {
             "device_class": "door",
-            "payload_on": "1",
+            "payload_on": "0",
             "force_update": "true",
-            "payload_off": "0",
+            "payload_off": "1",
         }
      },
 
