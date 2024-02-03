@@ -878,9 +878,7 @@ if __name__ == "__main__":
     logging.getLogger().setLevel(logging.INFO)
 
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
-                                     description=AP_DESCRIPTION,
-                                     epilog=AP_EPILOG)
-
+                                     description=AP_DESCRIPTION)
     parser.add_argument("-d", "--debug", action="store_true")
     parser.add_argument("-q", "--quiet", action="store_true")
     parser.add_argument("-u", "--user", type=str, help="MQTT username")
