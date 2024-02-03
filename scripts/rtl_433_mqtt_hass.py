@@ -355,7 +355,7 @@ mappings = {
             "unit_of_measurement": "in",
             "value_template": "{{ value|float|round(2) }}",
             "state_class": "total_increasing"
-        }
+     }
     },
 
     "rain_rate_in_h": {
@@ -452,7 +452,7 @@ mappings = {
             "state_class": "measurement"
         }
     },
-  
+
     "energy_kWh": {
         "device_type": "sensor",
         "object_suffix": "kwh",
@@ -464,7 +464,7 @@ mappings = {
             "state_class": "measurement"
         }
     },
-  
+
     "current_A": {
         "device_type": "sensor",
         "object_suffix": "A",
@@ -476,7 +476,7 @@ mappings = {
             "state_class": "measurement"
         }
     },
-  
+
     "voltage_V": {
         "device_type": "sensor",
         "object_suffix": "V",
@@ -571,6 +571,7 @@ mappings = {
         "config": {
             "device_class": "door",
             "payload_on": "1",
+            "force_update": "true",
             "payload_off": "0",
         }
      },
@@ -584,7 +585,7 @@ mappings = {
             "state_class": "total_increasing",
         }
     },
-  
+
     "consumption": {
         "device_type": "sensor",
         "object_suffix": "consumption",
