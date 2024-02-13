@@ -850,7 +850,7 @@ if __name__ == "__main__":
     parser.add_argument("-q", "--quiet", action="store_true")
     parser.add_argument("-u", "--user", type=str, help="MQTT username")
     parser.add_argument("-P", "--password", type=str, help="MQTT password")
-    parser.add_argument("-H", "--host", type=str, default="core-misquotto",
+    parser.add_argument("-H", "--host", type=str, default="127.0.0.1",
                         help="MQTT hostname to connect to (default: %(default)s)")
     parser.add_argument("-p", "--port", type=int, default=1883,
                         help="MQTT port (default: %(default)s)")
