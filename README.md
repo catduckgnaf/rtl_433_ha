@@ -1,7 +1,7 @@
 # RTL_433 HA Community Edition
 
 
-This will be the main place that my rtl_433 work with Home Assistant will take place. Some things are ready, some are not. Read on
+This repo, which contains the script and template config. This is on purpose, so those not using the add-on can benefit, and contribute to the project
 
 ## rtl_433 HA Addon
 
@@ -19,7 +19,6 @@ That is what makes this project great. Currently the rtl_433.conf is hosted here
 ## What about that horrible mqtt_discovery script that everyone says doesn't really work?
 
 That is what makes this project great. Currently the script is hosted here, in a simple, easy to use almost ready to go! Downloaded and updated with the add-on.
-Currently still working out a few tiny issues with set up.
 
 This was my main motivation for the project, to make it easy no matter setup to make rtl_433 better, without the main project pushing breaking changes or convoluted configurations
 
@@ -32,5 +31,5 @@ This was my main motivation for the project, to make it easy no matter setup to 
 
 2. Documentation, and getting started improvements. That means good documentation for anyone looking to get into rtl_433 with an easy guide.
 
-3. Finish script implimentation inside add-on
+3. Make another repo for a standalone docker, for those not using HAOS to benefit. Will add discovery options and container variables.
 
